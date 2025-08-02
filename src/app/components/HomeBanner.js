@@ -43,34 +43,57 @@ const circleImageVariants = {
 
 export default function HomeBanner() {
   return (
-    <section className="bg-[#FBEFD4] py-20 lg:py-24 overflow-hidden">
+    <section className="bg-[#FBEFD4] py-16 md:py-25 mt-10 lg:py-24 overflow-hidden">
       <motion.div
-        className="max-w-7xl mx-auto px-4 flex flex-col-reverse lg:flex-row items-center justify-between gap-10"
+        className="max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-10"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
         {/* Left: Text + Social Icons */}
-        <div className="w-full lg:w-1/2 flex items-start gap-6 text-center lg:text-left">
+        <div className="w-full md:w-1/2 flex items-start gap-4 text-center md:text-left">
           {/* Social Icons */}
           <motion.div
-            className="hidden lg:flex lg:flex-col items-center gap-4 text-2xl mt-2"
+            className="hidden md:flex flex-col items-center gap-4 text-2xl mt-2"
             variants={socialContainerVariants}
           >
-            <motion.a href="#" variants={socialIconVariants} whileHover={{ scale: 1.2, y: -3 }} className="text-[#0A66C2]">
+            <motion.a
+              href="https://www.linkedin.com/in/mritunjay-chaudhary-356135306/"
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={socialIconVariants}
+              whileHover={{ scale: 1.2, y: -3 }}
+              className="text-[#0A66C2]"
+            >
               <FaLinkedinIn />
             </motion.a>
-            <motion.a href="#" variants={socialIconVariants} whileHover={{ scale: 1.2, y: -3 }} className="text-[#E1306C]">
+
+            <motion.a
+              href="https://www.instagram.com/er.m.k.chaudhary"
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={socialIconVariants}
+              whileHover={{ scale: 1.2, y: -3 }}
+              className="text-[#E1306C]"
+            >
               <FaInstagram />
             </motion.a>
-            <motion.a href="#" variants={socialIconVariants} whileHover={{ scale: 1.2, y: -3 }} className="text-[#25D366]">
+
+            <motion.a
+              href="https://wa.me/7324892379"
+              target="_blank"
+              rel="noopener noreferrer"
+              variants={socialIconVariants}
+              whileHover={{ scale: 1.2, y: -3 }}
+              className="text-[#25D366]"
+            >
               <FaWhatsapp />
             </motion.a>
           </motion.div>
 
           {/* Intro Text */}
-          <motion.div variants={containerVariants} className="flex flex-col items-center lg:items-start">
+          <motion.div variants={containerVariants} className="flex flex-col items-center md:items-start">
             <motion.p variants={textItemVariants} className="text-lg sm:text-xl text-gray-600 font-medium mb-2">
               👋 Hello, I’m
             </motion.p>
@@ -110,10 +133,10 @@ export default function HomeBanner() {
 
         {/* Right: Profile Image */}
         <motion.div
-          className="w-full lg:w-1/2 flex justify-center items-center"
+          className="w-full md:w-1/2 flex justify-center items-center"
           variants={circleImageVariants}
         >
-          <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full border-8 border-[#3B5998] overflow-hidden shadow-2xl">
+          <div className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-8 border-[#3B5998] overflow-hidden shadow-2xl">
             <Image
               src="/img/profile.png"
               alt="Mritunjay Chaudhary"
