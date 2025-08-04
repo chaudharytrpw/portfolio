@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 // import CustomizerSidebar from './components/CustomizerSidebar';
 import { FaPalette } from 'react-icons/fa';
 import Footer from './components/Footer';
+import CustomCursor from './components/CustomCursor';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 export default function ClientLayout({ children }) {
   // --- 1. Set initial state for colors ---
@@ -33,6 +35,8 @@ export default function ClientLayout({ children }) {
       {/* Navbar receives the hex colors to pass down to its own elements if needed */}
       <Navbar bgColor={bgColor} textColor={textColor} />
 
+      <CustomCursor/>
+
       <main className="flex-grow">{children}</main>
 
       {/* CustomizerSidebar needs the current colors to highlight the active swatches */}
@@ -56,6 +60,8 @@ export default function ClientLayout({ children }) {
         <FaPalette /> 
         <span className="font-medium">Customize</span>
       </button> */}
+        
+        <ScrollToTopButton/>
 
       <Footer />
     </div>

@@ -82,17 +82,15 @@ export default function Navbar({ navItems = defaultNavItems, textColor = 'text-g
                 <li key={item.name} className="relative group">
                   <Link
                     href={item.href}
-                    className={`text-lg relative pb-1 transition-colors duration-300 ${
-                      pathname === item.href
+                    className={`text-lg relative pb-1 transition-colors duration-300 ${pathname === item.href
                         ? 'font-bold text-indigo-600'
                         : 'hover:text-indigo-600'
-                    }`}
+                      }`}
                   >
                     {item.name}
                     <span
-                      className={`absolute left-0 -bottom-1 h-0.5 bg-indigo-600 transition-all duration-300 ${
-                        pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
-                      }`}
+                      className={`absolute left-0 -bottom-1 h-0.5 bg-indigo-600 transition-all duration-300 ${pathname === item.href ? 'w-full' : 'w-0 group-hover:w-full'
+                        }`}
                     ></span>
                   </Link>
                 </li>
@@ -129,7 +127,7 @@ export default function Navbar({ navItems = defaultNavItems, textColor = 'text-g
           <>
             {/* Overlay */}
             <motion.div
-              className="fixed inset-0 bg-black bg-opacity-40 z-40"
+              className="fixed inset-0   z-40"
               variants={overlayVariants}
               initial="hidden"
               animate="visible"
@@ -152,7 +150,10 @@ export default function Navbar({ navItems = defaultNavItems, textColor = 'text-g
                   animate={{ opacity: 1, x: 0 }}
                   className="text-xl font-bold text-indigo-600"
                 >
-                  Menu
+                  {/* Logo */}
+                  <Link href="/" className="flex-shrink-0">
+                    <img src="/icon_converted.png" alt="Logo" className="h-12 w-auto object-contain" />
+                  </Link>
                 </motion.h2>
                 <button onClick={() => setIsOpen(false)} className="text-2xl text-gray-700">
                   <FaTimes />
@@ -172,9 +173,8 @@ export default function Navbar({ navItems = defaultNavItems, textColor = 'text-g
                     <Link
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className={`text-base font-medium px-2 py-1 rounded hover:bg-gray-100 ${
-                        pathname === item.href ? 'font-bold text-indigo-600' : ''
-                      }`}
+                      className={`text-base font-medium px-2 py-1 rounded hover:bg-gray-100 ${pathname === item.href ? 'font-bold text-indigo-600' : ''
+                        }`}
                     >
                       {item.name}
                     </Link>
