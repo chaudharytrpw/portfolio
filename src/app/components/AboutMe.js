@@ -48,7 +48,7 @@ export default function AboutMe() {
           About Me
         </motion.h2>
         <motion.p variants={fadeUpVariant} className="text-gray-600 mt-2 max-w-2xl mx-auto">
-          Full Stack Developer skilled in building modern, scalable applications with Next.js, React, Node.js, and PostgreSQL.
+          Full-Stack Developer with 1 year of professional experience in designing and building scalable web applications using Next.js, React.js, Node.js, and PostgreSQL. Skilled in RESTful APIs and performance optimization. Adept at collaborating with cross-functional teams to deliver efficient, user-friendly solutions.
         </motion.p>
         <motion.div variants={fadeUpVariant} className="w-20 h-[2px] bg-red-500 mt-4 mx-auto" />
       </motion.div>
@@ -70,13 +70,13 @@ export default function AboutMe() {
 
           <div className="text-gray-700 grid grid-cols-1 md:grid-cols-2 gap-6">
             <motion.p variants={fadeUpVariant}>
-              I'm Mritunjay Chaudhary, a Full Stack Developer with expertise in frontend and backend development. I specialize in creating powerful, scalable applications using Next.js, React, Node.js, and PostgreSQL.
+              I'm Mritunjay Chaudhary, a Full-Stack Developer with hands-on experience in both frontend and backend development. I build modern, scalable applications using Next.js, React.js, Node.js, and PostgreSQL.
             </motion.p>
             <motion.p variants={fadeUpVariant}>
-              I focus on clean code, seamless UI/UX, and backend logic that works smoothly under the hood. I enjoy collaborating on real-world projects that create meaningful impact.
+              My expertise includes designing RESTful APIs, performance optimization, and crafting clean, maintainable code. I focus on delivering seamless UI/UX along with robust backend logic.
             </motion.p>
             <motion.p variants={fadeUpVariant}>
-              I believe in continuous learning and enjoy experimenting with modern tools, frameworks, and performance optimization techniques.
+              With 1 year of professional experience, I’ve collaborated with cross-functional teams to deliver user-friendly solutions that create real-world impact.
             </motion.p>
           </div>
 
@@ -102,7 +102,7 @@ export default function AboutMe() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <div className="relative w-full max-w-sm">
-            {/* Red Frame */}
+            {/* Blue Frame */}
             <motion.div
               className="absolute top-4 left-4 w-full h-full bg-[#3B5998] rounded-lg z-0"
               variants={frameVariants}

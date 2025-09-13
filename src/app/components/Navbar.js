@@ -61,7 +61,6 @@ export default function Navbar({ navItems = defaultNavItems, textColor = 'text-g
   const navClasses = `
     fixed top-0 z-50 w-full
     transition-all duration-300
-    backdrop-blur-md
     ${hasScrolled ? 'bg-[#FBEFD4] shadow-md' : 'bg-transparent'}
     ${textColor}
   `;

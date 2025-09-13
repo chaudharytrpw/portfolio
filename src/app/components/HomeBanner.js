@@ -43,7 +43,7 @@ const circleImageVariants = {
 
 export default function HomeBanner() {
   return (
-    <section className="bg-[#FBEFD4] py-16 md:py-25 mt-10 lg:py-24 overflow-hidden">
+    <section className="bg-[#FBEFD4] py-16 md:py-25  lg:py-24 overflow-hidden">
       <motion.div
         className="max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-10"
         variants={containerVariants}

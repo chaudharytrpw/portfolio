@@ -19,18 +19,18 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: 'Amit Sharma',
-      image: '/img/images (1).jpg',
+      image: '/img/download.jpeg',
       text: 'Mritunjay did a fantastic job on our project. His frontend work using React and Tailwind was smooth and pixel-perfect. Highly recommended!',
     },
     {
       name: 'Priya Mehta',
-      image: '/img/female-3-150x150.jpg',
+      image: '/img/images.png',
 
       text: 'We hired Mritunjay for a full-stack application using Next.js and PostgreSQL. He delivered the project on time with clean and scalable code.',
     },
     {
       name: 'Ravi Kumar',
-      image: '/img/images (2).jpg',
+      image: '/img/images.png',
       text: 'He understood our requirements perfectly and implemented everything from backend APIs to responsive UI. Very professional and committed.',
     },
   ];
