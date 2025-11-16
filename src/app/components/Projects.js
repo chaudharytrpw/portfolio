@@ -1,39 +1,54 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaDatabase } from 'react-icons/fa';
-import { SiPostgresql, SiNextdotjs, SiMongodb, SiTailwindcss, SiPrisma } from 'react-icons/si';
+import { motion } from "framer-motion";
+import { FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
+import {
+  SiPostgresql,
+  SiNextdotjs,
+  SiMongodb,
+  SiTailwindcss,
+  SiPrisma,
+} from "react-icons/si";
 
 const projects = [
   {
-    title: 'Portfolio Website',
-    tech: ['React', 'Next.js', 'Tailwind CSS'],
-    description: 'A responsive portfolio to showcase my skills and experience.',
-    link: '#',
+    title: "SaaS Subscription Platform",
+    projectName: "Betelaudit",
+    tech: ["Next.js", "Tailwind CSS", "TypeScript", "Node.js", "PostgreSQL"],
+    description:
+      "A full-featured SaaS application with subscription billing, user dashboards, authentication, role-based access, and automated payments.",
+    link: "https://betelaudit.com/", // replace or keep as placeholder
   },
   {
-    title: 'E-commerce Website',
-    projectName: 'Ayumcure',
-    tech: ['React', 'Node.js', 'MongoDB'],
-    description: 'An e-commerce platform to manage products, orders, and users.',
-    link: 'https://ayumcure.com/',
+    title: "E-commerce Website",
+    projectName: "Ayumcure",
+    tech: ["React", "Node.js", "MongoDB"],
+    description:
+      "An e-commerce platform to manage products, orders, and users.",
+    link: "https://ayumcure.com/",
   },
   {
-    title: 'Blog Platform',
-    projectName: 'Betel Jobs',
-    tech: ['Next.js', 'PostgreSQL', 'Node.js'], // Corrected 'node js' to 'Node.js' for consistency
-    description: 'A dynamic blogging system with authentication and dashboard.',
-    link: 'https://beteljobs.trpwpartners.com/',
+    title: "Blog Platform",
+    projectName: "Betel Jobs",
+    tech: ["Next.js", "PostgreSQL", "Node.js"],
+    description: "A dynamic blogging system with authentication and dashboard.",
+    link: "https://beteljobs.trpwpartners.com/",
+  },
+  {
+    title: "Portfolio Website",
+    tech: ["React", "Next.js", "Tailwind CSS"],
+    description: "A responsive portfolio to showcase my skills and experience.",
+    link: "#",
   },
 ];
 
 const techIcons = {
   React: <FaReact className="text-sky-500" />,
-  'Next.js': <SiNextdotjs className="text-black" />,
-  'Node.js': <FaNodeJs className="text-green-600" />,
+  "Next.js": <SiNextdotjs className="text-black" />,
+  "Node.js": <FaNodeJs className="text-green-600" />,
   PostgreSQL: <SiPostgresql className="text-blue-700" />,
   MongoDB: <SiMongodb className="text-green-700" />,
-  'Tailwind CSS': <SiTailwindcss className="text-cyan-500" />,
+  "Tailwind CSS": <SiTailwindcss className="text-cyan-500" />,
   Prisma: <SiPrisma className="text-indigo-600" />,
 };
 
@@ -56,7 +71,7 @@ const cardVariants = {
     opacity: 1,
     transition: {
       duration: 0.5,
-      ease: 'easeOut',
+      ease: "easeOut",
     },
   },
 };
@@ -88,7 +103,7 @@ export default function Projects() {
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2, ease: 'circOut' }}
+          transition={{ duration: 0.7, delay: 0.2, ease: "circOut" }}
         />
       </div>
 
@@ -106,25 +121,33 @@ export default function Projects() {
             key={index}
             className="bg-[#fefefe] rounded-lg shadow p-6 flex flex-col" // Use flex-col to push link to the bottom
             variants={cardVariants}
-            whileHover={{ y: -8, boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)' }} // Lift effect on hover
-            transition={{ type: 'spring', stiffness: 300 }}
+            whileHover={{
+              y: -8,
+              boxShadow:
+                "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+            }} // Lift effect on hover
+            transition={{ type: "spring", stiffness: 300 }}
           >
-            <div className="flex-grow"> {/* This div will grow, pushing the link down */}
-                <h3 className="text-xl font-semibold text-blue-800 mb-2">
+            <div className="flex-grow">
+              {" "}
+              {/* This div will grow, pushing the link down */}
+              <h3 className="text-xl font-semibold text-blue-800 mb-2">
                 {proj.projectName || proj.title}
-                </h3>
-                <p className="text-sm text-gray-700 mb-4">{proj.description}</p>
-
-                <div className="flex flex-wrap gap-2 mb-4">
+              </h3>
+              <p className="text-sm text-gray-700 mb-4">{proj.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
                 {proj.tech.map((tech, i) => (
-                    <span
+                  <span
                     key={i}
                     className="flex items-center gap-1.5 text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full"
-                    >
-                    {techIcons[tech] ?? <FaDatabase className="text-gray-500" />} {tech}
-                    </span>
+                  >
+                    {techIcons[tech] ?? (
+                      <FaDatabase className="text-gray-500" />
+                    )}{" "}
+                    {tech}
+                  </span>
                 ))}
-                </div>
+              </div>
             </div>
 
             <a

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaLinkedinIn, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 // --- Animation Variants ---
@@ -43,7 +44,7 @@ const circleImageVariants = {
 
 export default function HomeBanner() {
   return (
-    <section className="bg-[#FBEFD4] py-16 md:py-25  lg:py-24 overflow-hidden">
+    <section className="bg-[#FBEFD4] py-16 md:py-24 lg:py-24 overflow-hidden">
       <motion.div
         className="max-w-7xl mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-10"
         variants={containerVariants}
@@ -53,6 +54,7 @@ export default function HomeBanner() {
       >
         {/* Left: Text + Social Icons */}
         <div className="w-full md:w-1/2 flex items-start gap-4 text-center md:text-left">
+          
           {/* Social Icons */}
           <motion.div
             className="hidden md:flex flex-col items-center gap-4 text-2xl mt-2"
@@ -109,15 +111,16 @@ export default function HomeBanner() {
               variants={textItemVariants}
               className="text-xl sm:text-2xl md:text-3xl font-semibold mt-2 text-gray-800"
             >
-              Full Stack Developer
+              Frontend Developer
             </motion.h3>
 
             <motion.p
               variants={textItemVariants}
               className="text-gray-700 mt-4 text-base sm:text-lg leading-relaxed max-w-md"
             >
-              I specialize in building modern, scalable web applications using React, Node.js,
-              Express, and PostgreSQL. I care about clean code, intuitive UX, and performance.
+              I’m a Frontend Developer with 1 year of hands-on experience in building responsive, 
+              user-friendly web interfaces. I work with React, Next.js, and modern JavaScript tools. 
+              I’m currently learning Node.js and PostgreSQL to grow into a full-stack developer.
             </motion.p>
 
             <motion.button
@@ -126,7 +129,8 @@ export default function HomeBanner() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Learn More
+              <Link href='/about'>Learn More </Link>
+
             </motion.button>
           </motion.div>
         </div>
